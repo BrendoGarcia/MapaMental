@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Mental - Calendário de Postagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .mapa {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .topico {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .topico:hover {
+      transform: scale(1.03);
+    }
+    .detalhes {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .dia {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Mapa Mental Interativo - Calendário de Postagens</h1>
+  <div class="mapa">
+    <div class="topico" onclick="toggleDetalhes(this)">
+      <h2>Geopolítica 🌍</h2>
+      <div class="detalhes">
+        <p><span class="dia">Segunda:</span> Tensão global (EUA x China)</p>
+        <p><span class="dia">Terça:</span> Conflitos (Israel, Ucrânia)</p>
+        <p><span class="dia">Quarta:</span> Crises internacionais</p>
+        <p><span class="dia">Quinta:</span> Educacional: Entenda um país/conflito</p>
+        <p><span class="dia">Sexta:</span> Decisões do Brasil no exterior</p>
+        <p><span class="dia">Sábado:</span> Resumo geopolítico semanal</p>
+        <p><span class="dia">Domingo:</span> Live ou Q&A sobre geopolítica</p>
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleDetalhes(this)">
+      <h2>Política Interna 🇧🇷</h2>
+      <div class="detalhes">
+        <p><span class="dia">Segunda:</span> Avaliação de governo</p>
+        <p><span class="dia">Terça:</span> Congresso e votações</p>
+        <p><span class="dia">Quarta:</span> Bastidores / escândalos</p>
+        <p><span class="dia">Quinta:</span> Performance política</p>
+        <p><span class="dia">Sexta:</span> Debates relevantes</p>
+        <p><span class="dia">Sábado:</span> Comparativos públicos</p>
+        <p><span class="dia">Domingo:</span> Enquetes ou análises populares</p>
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleDetalhes(this)">
+      <h2>Conteúdos Virais 📱</h2>
+      <div class="detalhes">
+        <p><span class="dia">Segunda:</span> Meme político explicado</p>
+        <p><span class="dia">Terça:</span> Reações a vídeos virais</p>
+        <p><span class="dia">Quarta:</span> Entrevistas de rua</p>
+        <p><span class="dia">Quinta:</span> Explicações rápidas (60s)</p>
+        <p><span class="dia">Sexta:</span> Fala polêmica + contexto</p>
+        <p><span class="dia">Sábado:</span> Tendência explicada</p>
+        <p><span class="dia">Domingo:</span> Top virais da semana</p>
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleDetalhes(this)">
+      <h2>Plataformas 🧩</h2>
+      <div class="detalhes">
+        <p><strong>TikTok / Reels:</strong> Vídeos rápidos, legendados</p>
+        <p><strong>Shorts:</strong> Explicações com imagens</p>
+        <p><strong>Twitter/X:</strong> Threads, breaking news, bastidores</p>
+        <p><strong>Site:</strong> Artigos profundos, análises, mapas</p>
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleDetalhes(this)">
+      <h2>Foco Mensal 📆</h2>
+      <div class="detalhes">
+        <p><strong>Semana 1:</strong> Oriente Médio / Escândalos políticos</p>
+        <p><strong>Semana 2:</strong> América Latina / STF / Reações públicas</p>
+        <p><strong>Semana 3:</strong> Potências / Disputas eleitorais</p>
+        <p><strong>Semana 4:</strong> África, Ásia / Reformas / Brasil x mundo</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetalhes(element) {
+      const detalhes = element.querySelector(".detalhes");
+      const visivel = detalhes.style.display === "block";
+      detalhes.style.display = visivel ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
